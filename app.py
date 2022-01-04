@@ -41,7 +41,8 @@ def do_unique(logs):
 
 
 def do_sort(logs, value):
-    sorted(logs, reverse=value)
+    is_asc = value == 'asc'
+    return sorted(logs, reverse=is_asc)
 
 
 def do_limit(logs, count):
